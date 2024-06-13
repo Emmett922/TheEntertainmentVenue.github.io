@@ -1,5 +1,11 @@
 /* # Google fonts import # */
 @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+
+@font-face {
+    font-family: Spice Rice;
+    src: url(/fonts/SpicyRice-23Mo.ttf);
+}
 
 /* Basic Styling */
 * {
@@ -13,7 +19,7 @@ body {
     background-color: black;
     color: white;
     margin: 0;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 
@@ -22,9 +28,10 @@ body {
 header {
     width: 1140px;
     max-width: 80%;
-    margin: auto;
+    margin: 0 auto;
     height: 50px;
     display: flex;
+    text-align: center;
     align-items: center;
     position: relative;
     z-index: 100;
@@ -35,6 +42,10 @@ header nav a {
     text-decoration: none;
     color: white;
     margin-right: 40px;
+}
+
+header nav a:hover {
+    color: gold;
 }
 
 
@@ -63,21 +74,57 @@ header nav a {
 .carousel .list .item .content {
     position: absolute;
     top: 20%;
-    width: 1140px;
+    width: 1240px;
     max-width: 80%;
-    left: 35%;
+    left: 45%;
     transform: translateX(-50%);
     padding-right: 30%;
     box-sizing: border-box;
     color: white;
-    text-shadow: 0 5px 10px #0004;
 }
 
-.carousel .list .item .content .img {
-    opacity: 1;
+.carousel .list .item .content img {
+    height: 325px;
 }
 
-.carousel .list .item .content .place-holder {
-    font-weight: bold;
-    font-size: 5em;
+.carousel .list .item .content .descr {
+    font-size: 45px;
+    line-height: 1em;
+    font-family: Spice Rice;
+}
+
+.carousel .list .item .content .descr {
+    background-image: linear-gradient(to top, gold 0%, goldenrod 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-left: 15%;
+}
+
+.carousel .list .item .content .buttons {
+    gap: 5px;
+    margin-top: 30px;
+    margin-left: 15%;
+}
+
+.carousel .list .item .content button {
+    border: none;
+    border-radius: 6px;
+    padding-top: 6px;
+    padding-inline: 20px;
+    cursor: pointer;
+    font-family: 'Galada';
+    font-size: 22px;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+    color: white;
+    background: none;
+}
+
+.carousel .list .item .content button:hover {
+    color: black;
+    background-image: linear-gradient(to top, gold 0%, goldenrod 70%);
+    border: 2px solid goldenrod;
 }
