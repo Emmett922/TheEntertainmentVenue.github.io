@@ -1,0 +1,83 @@
+/* # Google fonts import # */
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
+/* Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-size: 15px;
+}
+
+
+
+/* ### Header Section Styling ### */
+header {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header nav a {
+    font-family: 'Galada';
+    text-decoration: none;
+    color: white;
+    margin-right: 40px;
+}
+
+
+
+/* ### Carousel Section Styling ### */
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -50px;
+    position: relative;
+}
+
+.carousel .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.carousel .list .item .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.carousel .list .item .content {
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 35%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: white;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.carousel .list .item .content .img {
+    opacity: 1;
+}
+
+.carousel .list .item .content .place-holder {
+    font-weight: bold;
+    font-size: 5em;
+}
