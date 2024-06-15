@@ -1,36 +1,64 @@
-var next = document.querySelector('#next');
-var prev = document.querySelector('#prev');
-var carousel = document.querySelector('.carousel');
-var listItem = document.querySelector('.carousel .list');
-var thumbnails = dcoument.querySelector('.carousel .thumbnail');
+//Get DOM variables
+let nextDom = document.getElementById('next');
+let prevDom = document.getElementById('prev');
 
-next.onclick = function () {
-    showSlider('next');
+let carouselDom = document.querySelector('.carousel');
+let SliderDom = carouselDom.querySelector('.carousel .list');
+let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
+let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
+let timeDom = document.querySelector('.carousel .time');
+
+// -- Cycling through home pages -- //
+thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+let timeRunning = 3000;
+let timeAutoNext = 7000;
+
+nextDom.onclick = function(){
+    showSlider('next');    
 }
-prev.onclick = function () {
-    showSlider('prev');
+
+prevDom.onclick = function(){
+    showSlider('prev');    
 }
 
-var timeRunning = 3000;
-var runTimeOut;
-function showSlider(type) {
-    let itemSlider = document.querySelector('.carousel .list .item');
-    let itemThumbnail = document.querySelector('.carousel .thumbnail .item');
+let runTimeOut;
+let runNextAuto = setTimeout(() => {
+    next.click();
+}, timeAutoNext);
 
-    if(type == 'next') {
-        listItem.appendChild(itemSlider[0]);
-        thumbnails.appendChild(itemThumbnail[0]);
-        carousel.classList.add('next');
-    } else {
-        let positionLastItem = itemSlider.length - 1;
-        listItem.prepend(itemSlider[positionLastItem]);
-        thumbnails.prepend(itemThumbnail(positionLastItem));
-        carousel.classList.add('prev');
+function showSlider(type){
+    let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+    let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
+    
+    if (type === 'next'){
+        SliderDom.appendChild(SliderItemsDom[0]);
+        thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+        carouselDom.classList.add('next');
+    } else if (type === 'prev'){
+        SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
+        thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+        carouselDom.classList.add('prev');
     }
 
     clearTimeout(runTimeOut);
     runTimeOut = setTimeout(() => {
-        carousel.classList.remove('next');
-        carousel.classList.remove('prev');
-    }, timeRunning)
+        carouselDom.classList.remove('next');
+        carouselDom.classList.remove('prev');
+    }, timeRunning);
+
+    clearTimeout(runNextAuto);
+    runNextAuto = setTimeout(() => {
+        next.click();
+    }, timeAutoNext);
 }
+
+// -- Choosing a specific thumbnail -- //
+document.getElementById('venu').addEventListener('click', function() {
+    showSlider('venue');
+});
+document.getElementById('band').addEventListener('click', function() {
+    showSlider('band');
+});
+document.getElementById('oak-tree').addEventListener('click', function() {
+    showSlider('oak-tree');
+});

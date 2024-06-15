@@ -16,46 +16,45 @@
     <!--Page Header Section-->
     <header>
         <nav>
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
-        </nav>
+        <nav>
     </header>
 
     <!--Carousel Section-->
     <div class="carousel">
         <!--Items List-->
         <div class="list">
-            <div class="item" id="entertainment-venue">
+            <div class="item" id="venue">
                 <img class="background" src="images/page-banner1.jpg">
                 <div class="content">
+                    <div class="content-overlay"></div>
                     <img class="content-logo" src="images/entertainment_venue_logo.png">
                     <div class="descr">Events, Live Music, & More</div>
                     <div class="buttons">
-                        <button>More Info</button>
-                        <button>Book An Event</button>
+                        <button>See More</button>
+                        <button>Contact Us</button>
                     </div>
                 </div>
             </div>
-            <div class="item" id="entertainment-band">
+            <div class="item" id="band">
                 <img class="background" src="images/page-banner2.jpg">
                 <div class="content">
-                    <img class="content-logo" src="images/entertainment_venue_logo.png">
-                    <div class="descr">Events, Live Music, & More</div>
+                    <div class="content-overlay"></div>
+                    <img class="content-logo" src="images/the_entertainment_band_&_friends.png">
+                    <div class="descr">Live Music</div>
                     <div class="buttons">
-                        <button>More Info</button>
-                        <button>Book An Event</button>
+                        <button>See More</button>
+                        <button>Contact Us</button>
                     </div>
                 </div>
             </div>
-            <div class="item" id="oaktree-productions">
-                <img class="background" src="images/page-banner2.jpg">
+            <div class="item" id="oak-tree">
+                <img class="background" src="images/oak-tree-3.jpg">
                 <div class="content">
-                    <img class="content-logo" src="images/oak-tree.jpeg">
-                    <div class="descr">Events, Live Music, & More</div>
+                    <div class="content-overlay"></div>
+                    <img class="content-logo" src="images/image4 copy.png">
+                    <div class="descr">Events Management</div>
                     <div class="buttons">
-                        <button>More Info</button>
-                        <button>Book An Event</button>
+                        <button>See More</button>
                     </div>
                 </div>
             </div>
@@ -64,16 +63,28 @@
         <!--Thumbnails-->
         <div class="thumbnail">
             <div class="item">
-                <img src="images/page-banner2.jpg">
-                <div class="content"></div>
-            </div>
-            <div class="item">
-                <img src="images/oak-tree.jpeg">
-                <div class="content"></div>
-            </div>
-            <div class="item">
                 <img src="images/page-banner1.jpg">
-                <div class="content"></div>
+                <div class="content">
+                    <div class="title">
+                        Venue
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/page-banner2.jpg">
+                <div class="content">
+                    <div class="title">
+                        Band
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/oak-tree-3.jpg">
+                <div class="content">
+                    <div class="title">
+                        Event Productions
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -82,7 +93,12 @@
             <button id="prev"><</button>
             <button id="next">></button>
         </div>
+
+        <!--Run time for animation-->
         <div class="time"></div>
     </div>
+
+    <!--Main JS file-->
+    <script src="js/web-app.js"></script>
 </body>
 </html>

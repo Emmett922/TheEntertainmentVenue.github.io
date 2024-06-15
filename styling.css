@@ -1,19 +1,19 @@
-/* # Google fonts import # */
+/* # Google font import # */
 @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
-
+/* FontSpace font import # */
 @font-face {
     font-family: Spice Rice;
     src: url(/fonts/SpicyRice-23Mo.ttf);
 }
 
-/* Basic Styling */
+/* Basic Styling
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
+*/
 
 body {
     background-color: black;
@@ -27,15 +27,14 @@ body {
 /* ### Header Section Styling ### */
 header {
     width: 1390px;
-    max-width: 100%;
-    margin: 0 auto;
+    max-width: 80%;
+    margin: auto;
     height: 50px;
     display: flex;
     text-align: center;
     align-items: center;
     position: relative;
     z-index: 100;
-    transition: all 0.3 ease;
 }
 
 header nav a {
@@ -63,18 +62,19 @@ header nav a:hover {
 .carousel .list .item {
     position: absolute;
     inset: 0 0 0 0;
+    width: 100%;
+    height: 100%;
 }
 
 .carousel .list .item .background {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 1;
 }
 
 .carousel .list .item .content {
     position: absolute;
-    top: 10%;
+    top: 15%;
     width: 1240px;
     max-width: 80%;
     left: 40%;
@@ -82,19 +82,38 @@ header nav a:hover {
     padding-right: 30%;
     box-sizing: border-box;
     color: white;
+    text-shadow: 0 5px 10px #0004;
 }
 
-.carousel .list .item .content img {
+.carousel .list #band .content {
+    top: 10%;
+}
+
+.carousel .list .item .content .content-overlay {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    background-color: black;
+    opacity: 0.5;
+    filter: blur(45px);
+    height: 105%;
+    width: 65%;
+    border-radius: 100px;
+}
+
+.carousel .list .item .content-logo {
     height: 375px;
+    opacity: 1;
 }
 
-.carousel .list .item .content .descr {
+.carousel .list #band .content-logo {
+    height: 500px;
+}
+
+.carousel .list .item .descr {
     font-size: 45px;
     line-height: 1em;
     font-family: Spice Rice;
-}
-
-.carousel .list .item .content .descr {
     background-image: linear-gradient(to top, gold 0%, goldenrod 100%);
     background-size: 100%;
     -webkit-background-clip: text;
@@ -104,13 +123,21 @@ header nav a:hover {
     margin-left: 15%;
 }
 
-.carousel .list .item .content .buttons {
+.carousel .list #oak-tree .descr {
+    margin-top: 15px;
+    height: 50px;
+}
+
+.carousel .list .item .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: 50px;
     gap: 5px;
     margin-top: 30px;
     margin-left: 15%;
 }
 
-.carousel .list .item .content button {
+.carousel .list .item button {
     border: none;
     border-radius: 6px;
     padding: 8px 20px;
@@ -123,7 +150,7 @@ header nav a:hover {
     background: none;
 }
 
-.carousel .list .item .content button:hover {
+.carousel .list .item button:hover {
     color: black;
     background-image: linear-gradient(to top, gold 0%, goldenrod 70%);
     border: 2px solid goldenrod;
@@ -139,17 +166,23 @@ header nav a:hover {
     width: max-content;
     z-index: 100;
     display: flex;
-    gap: 50px;
+    gap: 40px;
 }
 
 .thumbnail .item {
-    width: 230px;
-    height: 350px;
+    width: 200px;
+    height: 300px;
     flex-shrink: 0;
     position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
 
-.thumbnail img {
+.thumbnail .item:hover {
+    margin-top: -10px;
+}
+
+.thumbnail .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -158,11 +191,15 @@ header nav a:hover {
 }
 
 .thumbnail .item .content {
+    color: white;
     position: absolute;
-    text-align: center;
     bottom: 10px;
     left: 10px;
     right: 10px;
+}
+
+.thumbnail .item .content .title {
+    font-family: Spice Rice;
 }
 
 
@@ -171,7 +208,8 @@ header nav a:hover {
 .arrows {
     position: absolute;
     top: 85%;
-    right: 45%;
+    right: 43%;
+    z-index: 100;
     width: 300px;
     max-width: 30%;
     display: flex;
@@ -180,8 +218,8 @@ header nav a:hover {
 }
 
 .arrows button {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #eee4;
     border: none;
@@ -198,49 +236,64 @@ header nav a:hover {
     color: #555;
 }
 
+
+/* ## Animations ## */
 .carousel .list .item:nth-child(1) {
     z-index: 1;
 }
 
+/* # Animation for first item content # */
 .carousel .list .item:nth-child(1) .content-logo,
 .carousel .list .item:nth-child(1) .descr,
-.carousel .list .item:nth-child(1) .content .buttons  {
+.carousel .list .item:nth-child(1) .buttons {
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
-    animation: showContent 0.5s linear 1 forwards;
+    animation: showContent 0.5s 1s linear 1 forwards!important;
 }
 @keyframes showContent {
-    to{
+    to {
         opacity: 1;
         filter: blur(0);
         transform: translateY(0);
     }
 }
+.carousel .list .item:nth-child(1) .content-overlay {
+    transform: translateY(50px);
+    filter: blur(45px);
+    opacity: 0;
+    animation: showOverlay 0.5s 1s linear 1 forwards!important;
+}
+@keyframes showOverlay {
+    to {
+        opacity: 0.5;
+        filter: blur(45px);
+    }
+}
 
-
+.carousel .list .item:nth-child(1) .content-overlay {
+    animation-delay: 1.2s!important;
+}
 .carousel .list .item:nth-child(1) .content-logo {
-    animation-delay: 1.2s;
+    animation-delay: 1.4s!important;
 }
-
 .carousel .list .item:nth-child(1) .descr {
-    animation-delay: 1.4s;
+    animation-delay: 1.6s!important;
 }
-
-.carousel .list .item:nth-child(1) .content .buttons {
-    animation-delay: 1.6s;
+.carousel .list .item:nth-child(1) .buttons {
+    animation-delay: 1.8s!important;
 }
 
 
 
 /* Next Click Effect */
 .carousel.next .list .item:nth-child(1) .background {
-    width: 150px;
-    height: 220px;
+    width: 200px;
+    height: 300px;
     position: absolute;
-    left: 50%;
+    left: 55%;
     bottom: 50px;
-    border-radius: 20px;
+    border-radius: 30px;
     animation: showImage 0.5s linear 1 forwards;
 }
 @keyframes showImage {
@@ -254,25 +307,51 @@ header nav a:hover {
 }
 
 .carousel.next .thumbnail .item:nth-last-child(1) {
-    width: 0;
     overflow: hidden;
     animation: showThumbnail 0.5s linear 1 forwards;
 }
+.carousel.prev .list .item img {
+    z-index: 100;
+}
 @keyframes showThumbnail {
-    to {
-        width: 230px;
+    from {
+        width: 0;
+        opacity: 0;
     }
 }
 
+
 .carousel.next .thumbnail {
-    transform: translateX(150px);
-    animation: transformThumbnail 0.5s linear 1 forwards;
+    animation: effectNext 0.5s linear 1 forwards;
 }
-@keyframes transformThumbnail {
-    to {
-        transform: translateX(0);
+@keyframes effectNext {
+    from {
+        transform: translateX(150px);
     }
 }
+
+
+/* Running Time Animation */
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: goldenrod;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+    animation: runningTime 3s linear 1 forwards;
+
+}
+@keyframes runningTime {
+    from { width: 100% }
+    to { width: 0 }
+}
+
 
 /* Previous Click Effect */
 .carousel.prev .list .item:nth-child(2) {
@@ -283,12 +362,12 @@ header nav a:hover {
     position: absolute;
     bottom: 0;
     left: 0;
-    animation: outImage 0.5s linear 1 forwards;
+    animation: outFrame 0.5s linear 1 forwards;
 }
-@keyframes outImage {
+@keyframes outFrame {
     to {
-        width: 230px;
-        height: 350px;
+        width: 200px;
+        height: 300px;
         border-radius: 20px;
         left: 55%;
         bottom: 50px;
@@ -296,48 +375,27 @@ header nav a:hover {
 }
 
 .carousel.prev .thumbnail .item:nth-child(1) {
-    width: 0;
     overflow: hidden;
     opacity: 0;
     animation: showThumbnail 0.5s linear 1 forwards;
 }
 
-.carousel .list .item:nth-child(2) .content-logo,
-.carousel .list .item:nth-child(2) .descr,
-.carousel .list .item:nth-child(2) .content .buttons {
-    animation: contentOut 1.5s linear 1 forwards;
-}
-@keyframes contentOut {
-    to {
-        transform: translateY(-150px);
-        filter: blur(20px);
-        opacity: 0;
-    }
-}
 .carousel.next .arrows button,
 .carousel.prev .arrows button {
     pointer-events: none;
 }
 
-/* Running time of annimation */
-.time {
-    width: 100%;
-    height: 5px;
-    background-color: goldenrod;
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    left: 0;
+.carousel .list .item:nth-child(2) .content-overlay,
+.carousel .list .item:nth-child(2) .content-logo,
+.carousel .list .item:nth-child(2) .descr,
+.carousel .list .item:nth-child(2) .buttons {
+    animation: contentOut 1.5s linear 1 forwards!important;
 }
-
-.carousel.next .time,
-.carousel.prev .time {
-    width: 100%;
-    animation: timeRunning 2s linear 1 forwards;
-}
-@keyframes timeRunning {
+@keyframes contentOut {
     to {
-        width: 0;
+        transform: translateY(-150px);
+        filter: blur(30px);
+        opacity: 0;
     }
 }
 
@@ -349,12 +407,12 @@ header nav a:hover {
         padding-right: 0;
     }
 
-    .carousel .list .item .content img {
+    .carousel .list .item .content .background {
         height: 50%;
         width: 50%;
     }
 
-    .carousel .list .item .content .title {
+    .carousel .list .item .content .descr {
         font-size: 30px;
     }
 }
