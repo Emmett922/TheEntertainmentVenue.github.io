@@ -420,3 +420,45 @@ header nav a:hover {
         font-size: 30px;
     }
 }
+
+@media (max-width: 480px) {
+    @keyframes outFrame {
+        to {
+            height: 0px;
+            width: 0px;
+            border-radius: 20px;
+            left: 90%;
+            bottom: 50px;
+        }
+    }
+
+    .arrows {
+        position: absolute;
+        top: 90%;
+        right: 29.5%;
+    }
+
+    .thumbnail {
+        left: -200%
+    }
+
+    .carousel .list #band .content {
+        left: 35%;
+    }
+
+    .carousel .list #venue .content {
+        top: 25%;
+    }
+
+    .carousel .list #venue .content-logo {
+        height: 225px;
+    }
+
+    .carousel .list #oak-tree .content {
+        top: 25%;
+    }
+
+    .carousel .list #oak-tree .content-logo {
+        height: 300px;
+    }
+}
