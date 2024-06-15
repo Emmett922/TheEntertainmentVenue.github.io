@@ -11,7 +11,7 @@ let timeDom = document.querySelector('.carousel .time');
 // -- Cycling through home pages -- //
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 let timeRunning = 3000;
-let timeAutoNext = 7000;
+let timeAutoNext = 10000;
 
 nextDom.onclick = function(){
     showSlider('next');    
@@ -53,12 +53,3 @@ function showSlider(type){
 }
 
 // -- Choosing a specific thumbnail -- //
-document.getElementById('venu').addEventListener('click', function() {
-    showSlider('venue');
-});
-document.getElementById('band').addEventListener('click', function() {
-    showSlider('band');
-});
-document.getElementById('oak-tree').addEventListener('click', function() {
-    showSlider('oak-tree');
-});

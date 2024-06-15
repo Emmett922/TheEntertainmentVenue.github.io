@@ -1,0 +1,78 @@
+/* # Google font import # */
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+/* FontSpace font import # */
+@font-face {
+    font-family: Spice Rice;
+    src: url(/fonts/SpicyRice-23Mo.ttf);
+}
+
+body {
+    background-color: rgb(25,25,25);
+    color: white;
+    margin: 0;
+    font-size: 20px;
+}
+
+
+
+/* ## Header Section Styling ## */
+header {
+    align-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('images/jazz-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 80vh;
+    text-align: center;
+    width: 100vw;
+}
+
+header nav a {
+    vertical-align: middle;
+    position: relative;
+    color: white;
+    font-family: 'Galada';
+    text-decoration: none;
+    font-size: 50px;
+}
+
+header nav .title {
+    margin-inline: 50px;
+}
+
+header nav .link::after {
+    content: '';
+    position: absolute;
+    background-color: goldenrod;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -0.2px;
+    transition: all 0.3s ease-in;
+}
+
+header nav .link:hover::after {
+    width: 100%;
+}
+
+/* Basic Section Styling */
+section {
+    padding: 100px 0;
+}
+
+/* ### Introduction Section Styling ### */
+.introduction {
+    height: 100vh;
+    text-align: center;
+}
+
+.introduction .title {
+    font-family: Spice Rice;
+    font-size: 80px;
+    background-image: linear-gradient(to top, rgb(255, 236, 131) 0%, rgb(255, 184, 6) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
