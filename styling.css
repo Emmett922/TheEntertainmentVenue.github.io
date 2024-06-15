@@ -3,7 +3,7 @@
 /* FontSpace font import # */
 @font-face {
     font-family: Spice Rice;
-    src: url(fonts/SpicyRice-23Mo.ttf);
+    src: url(fonts/SpicyRice-23Mo.ttf), format("trutype");
 }
 
 /* Basic Styling
