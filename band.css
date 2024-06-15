@@ -6,11 +6,50 @@
     src: url(fonts/SpicyRice-23Mo.ttf), format("trutype");
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
 body {
-    background-color: rgb(25,25,25);
+    background-color: #141414;
     color: white;
     margin: 0;
     font-size: 20px;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* Scroll Up Button */
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: goldenrod;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    z-index: 999;
+    font-size: 30px;
+    border-radius: 6px;
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 
@@ -22,9 +61,14 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 80vh;
+    align-self: center;
+    height: 90vh;
+    margin-inline: 2.2%;
+    margin-top: 1%;
     text-align: center;
-    width: 100vw;
+    width: 95vw;
+    border-radius: 40px;
+    box-shadow: rgb(0,0,0) 0px 20px 30px -10px;
 }
 
 header nav a {
@@ -57,16 +101,17 @@ header nav .link:hover::after {
 
 /* Basic Section Styling */
 section {
-    padding: 100px 0;
+    padding: 150px 0;
 }
 
 /* ### Introduction Section Styling ### */
 .introduction {
-    height: 100vh;
     text-align: center;
 }
 
-.introduction .title {
+.introduction .title,
+.members .title,
+.contact .title {
     font-family: Spice Rice;
     font-size: 80px;
     background-image: linear-gradient(to top, rgb(255, 236, 131) 0%, rgb(255, 184, 6) 100%);
@@ -75,4 +120,444 @@ section {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+}
+
+.introduction .max-width {
+    max-width: 1550px;
+}
+
+.introduction .content {
+    padding-top: 40px;
+    text-align: justify;
+    max-width: 1550px;
+    margin: 0 auto;
+}
+
+.introduction .content p {
+    font-size: 26px;
+}
+
+.introduction .content .column.one,
+.introduction .content .column.two,
+.introduction .content .column.three {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.introduction .content .column.one .left,
+.introduction .content .column.three .left {
+    width: 45%;
+    height: 550px;
+    width: 400px;
+    background-color: grey;
+    border-radius: 50px;
+}
+
+.introduction .content .column.one .right,
+.introduction .content .column.three .right {
+    width: 55%;
+}
+
+.introduction .content .column.two .left {
+    width: 55%;
+}
+
+.introduction .content .column.two .right {
+    width: 45%;
+    height: 550px;
+    width: 400px;
+    background-color: grey;
+    border-radius: 50px;
+}
+
+.introduction .content .column.two,
+.introduction .content .column.three {
+    margin-top: 5%;
+}
+
+
+
+/* ## Members Section Styling ## */
+.members {
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 1600px;
+}
+
+.members .carousel .card {
+    background-color: rgb(50,50,50);
+    border-radius: 20px;
+    text-align: center;
+    padding: 45px 0 45px 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-inline: 20px;
+}
+
+.members .carousel .card:hover {
+    background-image: linear-gradient(to top, rgb(255, 229, 83) 0%, rgb(255, 184, 6) 100%);
+    background-size: 100%;
+    color: black;
+}
+
+.members .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.members .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+
+.members .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.members .carousel .card img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid goldenrod;
+}
+
+.members .carousel .card:hover img {
+    border-color: white;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: non!important;
+    border-radius: 50%;
+    border: 2px solid goldenrod!important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: goldenrod!important;
+}
+
+
+
+/* ## Contact Section Styling ## */
+.contact {
+    color: white;
+}
+
+.contact .title {
+    position: relative;
+    text-align: center;
+}
+
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .max-width {
+    max-width: 1320px;
+}
+
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i {
+    font-size: 25px;
+    color: goldenrod;
+}
+
+.contact .contact-content .info .head {
+    font-weight: 501;
+}
+
+.contact .contact-content .info .head a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact .contact-content #facebook:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.contact .contact-content .info .sub-title a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact .contact-content #insta:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.contact .right form .fields {
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .name {
+    margin-right: 10px;
+}
+
+.contact .right form .phone {
+    margin-left: 10px;
+}
+
+.contact .right form .textarea {
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid goldenrod;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button {
+    height: 47px;
+    width: 170px;
+}
+
+.contact .right form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    background: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover {
+    color: black;
+    background-image: linear-gradient(to top, gold 0%, goldenrod 70%);
+    border: 2px solid goldenrod;
+}
+
+
+
+/* # Footer Section Styling # */
+footer {
+    color: white;
+    padding: 20px 23px;
+    text-align: center;
+    font-size: 15px;
+}
+
+footer span a {
+    color: white;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+    color: goldenrod;
+}
+
+
+
+/* Scrolling Styling */
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.6s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+
+
+/* ### Page Responsiveness ### */
+@media (max-width: 1300px) {
+
+}
+@media (max-width: 1150px) {
+    header nav img {
+        height: 650px;
+        width: 650px;
+    }
+
+    header nav .title {
+        margin-inline: 35px;
+    }
+
+    .introduction .content .column.one .left,
+    .introduction .content .column.two .right,
+    .introduction .content .column.three .left {
+        height: 375px;
+        width: 350px
+    }
+
+    .introduction .content p {
+        font-size: 20px;
+    }
+
+    .introduction .title,
+    .members .title,
+    .contact .title {
+        font-size: 60px;
+    }
+}
+@media (max-width: 1050px) {
+    .introduction .content .column.one .left,
+    .introduction .content .column.two .right,
+    .introduction .content .column.three .left {
+        height: 300px;
+        width: 275px;
+    }
+
+    .introduction .content p {
+        font-size: 15px;
+    }
+}
+@media (max-width: 1046px) {
+    header nav img {
+        height: 500px;
+        width: 500px;
+    }
+
+    header nav .title {
+        margin-inline: 20px;
+    }
+
+    header nav a {
+        font-size: 35px;
+    }
+    .introduction .title {
+        font-size: 40px;
+    }
+}
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px) {
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .introduction .content .column.one .left,
+    .introduction .content .column.two .right,
+    .introduction .content .column.three .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .introduction .content .column.two .right {
+        margin-top: -110%;
+    }
+
+    .introduction .content .column.one .right,
+    .introduction .content .column.three .right {
+        flex: 100%;
+    }
+
+    .introduction .content .column.two .left {
+        flex: 100%;
+        margin-top: 70%;
+    }
+}
+@media (max-width: 794px) {
+    header nav img {
+        height: 400px;
+        width: 400px;
+    }
+
+    header nav .title {
+        margin-inline: 10px;
+    }
+
+    header nav a {
+        font-size: 25px;
+    }
+}
+@media (max-width: 586px) {
+    header nav img {
+        height: 350px;
+        width: 350px;
+    }
+
+    header nav .title {
+        margin-inline: 5px;
+    }
+
+    header nav a {
+        font-size: 20px;
+    }
 }

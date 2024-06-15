@@ -7,36 +7,255 @@
     <title>The Entertainment Band & Friends</title>
     <!--Page Icon-->
     <link rel="shortcut icon" href="images/the_entertainment_band_&_friends.png" type="image/x-icon">
+    <!--Font Awsome icons (free use)-->
+    <script src="https://kit.fontawesome.com/779277f03e.js" crossorigin="anonymous"></script>
+    <!--JQuery Source (free use)-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!--Main CSS file-->
     <link rel="stylesheet" href="band.css">
+    <!--Waypoints CDN JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <!--Owl Carousel CDN JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!--Owl Carousel CDN CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 </head>
 <body>
+    <!--Scroll Up Button-->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <!--Heading/Nav-->
     <header>
         <nav>
             <a href="index.html" class="link">Home</a>
             <a href="#introduction" class="title"><img src="images/the_entertainment_band_&_friends.png" alt=""></a>
-            <a href="" class="link">Contact</a>
+            <a href="#contact" class="link">Contact</a>
         </nav>
     </header>
 
+    <!--Introduction Section-->
+    <div #intro></div>
     <section class="introduction" id="introduction">
-        <div class="introduction-container">
-            <div class="title">The Entertainment Band & Friends Bio</div>
-            <div class="content">
-                <p>If you want to hear Top 40's popular music you simply turn on the radio, but if you want to see the Classics done right there is no other band but The Entertainment Band & Friends! The Entertainment  Band & Friends are a solo to 12 piece band from Atlanta, Ga  that plays all your Funk Jazz Soul R&B classics and then some. Since playing over 30 years  The Entertainment  Band & Friends has performed at nearly 600 events and festivals. They are a staple in the diets of thousands of music-lovers  that request the band for  Corporate Events  to  Private Party’s  thanks to clients such as; The Entertainment Venue,  Legendary Events, Chateau Elan, The City Winery, City Of Powder Springs, 5 Church,  Atlanta’s very own Greenbay Packers “Preston Smith’s” Wedding and Reception, Lockheed Martin, 3M, 4th of July Festivals for the State, AKA, Deltas,  City of Atlanta and much more. </p>
-                <br>
-                <p>The band’s sound fuses heavy-hitting dance grooves with flashy horn lines, energetic instrumental solos and soaring vocals that will make you want to dance all night. “On stage, every single member is equally strong in their musicality and their delivery. This kind of chemistry from a band is a real, rare treat.”-Legendary Events</p>
-                <br>
-                <p>As longtime friends, collaborators, and multi-dimensional artists, Clarence Pennie the founder of The Entertainment Band & Friends are a creative talented group of artists “friends” that blend various genres and produce a chemistry of music that is perfectly aligned for any size/style crowd or event. </p>
-                <br>
-                <p>The Entertainment Band & Friends combine their powers as DJs, sound engineers, and musicians resulting in a brilliant technical display of creative collaboration for any special event.</p>
-                <br>
-                <p>The Entertainment Band & Friends enjoy a vibrant touring career with major festival plays for private clients such as;  Legendary Events, The City Winery, City Of Powder Springs, 5 Church,   Atlanta’s own Greenbay Packers “Preston Smith” Wedding  and Reception,  Chateau Elan,  Lockheed Martin, 3M, 4th of July Festivals for the State, AKA, Deltas, Omegas , City of Atlanta and much more. </p>
-                <br>
-                <p>Did you know that artists such as Bruno Mars, Justin Timberlake, Beyonce and Megan Trainer sampled a lot of their materials from the Old School? Hear those soulful vocals? The catchy horn lines? The drum and bass with heavy backbeats? That's the Old School! We pride ourselves in knowing a wide range of repertoire: Something from the Old School and something from the New School, but always something to keep everybody happy! </p>
-                <br>
-                <p>We invite you to explore live music for your next intimate to large event and witness the energy of the room transform the guests memories for years to come. </p>
+        <div class="max-width">
+            <div class="introduction-container reveal">
+                <div class="title reveal">The Entertainment Band & Friends Bio</div>
+                <div class="content reveal">
+                    <div class="column one">
+                        <div class="left reveal"></div>
+                        <div class="right reveal">
+                            <p>If you want to hear Top 40's popular music you simply turn on the radio, but if you want to see the Classics done right there is no other band but The Entertainment Band & Friends! The Entertainment  Band & Friends are a solo to 12 piece band from Atlanta, Ga  that plays all your Funk Jazz Soul R&B classics and then some. Since playing over 30 years  The Entertainment  Band & Friends has performed at nearly 600 events and festivals. They are a staple in the diets of thousands of music-lovers  that request the band for  Corporate Events  to  Private Party’s  thanks to clients such as; The Entertainment Venue,  Legendary Events, Chateau Elan, The City Winery, City Of Powder Springs, 5 Church,  Atlanta’s very own Greenbay Packers “Preston Smith’s” Wedding and Reception, Lockheed Martin, 3M, 4th of July Festivals for the State, AKA, Deltas,  City of Atlanta and much more. </p>
+                            <p>The band’s sound fuses heavy-hitting dance grooves with flashy horn lines, energetic instrumental solos and soaring vocals that will make you want to dance all night. “On stage, every single member is equally strong in their musicality and their delivery. This kind of chemistry from a band is a real, rare treat.”-Legendary Events</p>
+                        </div>
+                    </div>
+                    <div class="column two">
+                        <div class="left reveal">
+                            <p>As longtime friends, collaborators, and multi-dimensional artists, Clarence Pennie the founder of The Entertainment Band & Friends are a creative talented group of artists “friends” that blend various genres and produce a chemistry of music that is perfectly aligned for any size/style crowd or event. </p>
+                            <p>The Entertainment Band & Friends combine their powers as DJs, sound engineers, and musicians resulting in a brilliant technical display of creative collaboration for any special event.</p>
+                        </div>
+                        <div class="right reveal"></div>
+                    </div>
+                    <div class="column three">
+                        <div class="left reveal"></div>
+                        <div class="right reveal">
+                            <p>The Entertainment Band & Friends enjoy a vibrant touring career with major festival plays for private clients such as;  Legendary Events, The City Winery, City Of Powder Springs, 5 Church,   Atlanta’s own Greenbay Packers “Preston Smith” Wedding  and Reception,  Chateau Elan,  Lockheed Martin, 3M, 4th of July Festivals for the State, AKA, Deltas, Omegas , City of Atlanta and much more</p>
+                            <p>Did you know that artists such as Bruno Mars, Justin Timberlake, Beyonce and Megan Trainer sampled a lot of their materials from the Old School? Hear those soulful vocals? The catchy horn lines? The drum and bass with heavy backbeats? That's the Old School! We pride ourselves in knowing a wide range of repertoire: Something from the Old School and something from the New School, but always something to keep everybody happy! </p>
+                            <p>We invite you to explore live music for your next intimate to large event and witness the energy of the room transform the guests memories for years to come. </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!--Members Section-->
+    <section class="members" id="members">
+        <div class="max-width">
+            <div class="members-container">
+                <div class="title reveal">Members</div>
+                <br><br>
+                <div class="carousel owl-carousel reveal">
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="">
+                            <div class="text">Name:</div>
+                            <p>Instrument(s)</p>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact Us Section-->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <div class="title reveal">Contact Us</div>
+            <br><br>
+            <div class="contact-content reveal">
+                <div class="column left">
+                    <div class="text">Get in Touch</div>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fa-solid fa-phone"></i>
+                            <div class="info">
+                                <div class="head">Phone</div>
+                                <div class="sub-title">(470) 373-4961</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">entertainmentbandandfriends@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-brands fa-facebook"></i>
+                            <div class="info" id="facebook">
+                                <div class="head"><a href="https://www.facebook.com/entertainmentbandandfriends">Facebook</a></div>
+                                <div class="sub-title"><a href="https://www.facebook.com/entertainmentbandandfriends">@entertainmentbandandfriends</a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-brands fa-instagram"></i>
+                            <div class="info" id="insta">
+                                <div class="head"><a href="https://www.instagram.com/entertainmentbandandfriends/">Instagram</a></div>
+                                <div class="sub-title"><a href="https://www.instagram.com/entertainmentbandandfriends/">@entertainmentbandandfriends</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Message Us</div>
+                    <!--Contact Form-->
+                    <form method="POST" action="https://api.web3forms.com/submit" name="contact-form">
+                        <input type="hidden" name="access_key" value="d2c3865b-5ceb-4888-a5d8-651210ec77fc">
+    
+                        <!--Email Subject for submission-->
+                        <input type="hidden" name="subject" value="Entertainment Band & Friends">
+    
+                        <!--Email From MGSystemsInc.com-->
+                        <input type="hidden" name="from_name" value="TheEntertainmentVenue.com">
+    
+                        <!--Reply To Customer-->
+                        <input type="hidden" name="replyto" value="">
+    
+                        <!--SPAM Prevention-->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
+                        <!--hCaptcha: Extra Layer of SPAM Prevention-->
+                        <div class="h-captcha" data-captch="true"></div>
+    
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" class="name" name="Name" placeholder="Name" onclick="this.select()" required>
+                            </div>
+                            <div class="field phone">
+                                <input type="text" name="Phone" placeholder="Phone" onclick="this.select()">
+                            </div>
+                        </div>
+                        <div class="field email">
+                            <input type="email" name="Email" placeholder="Email" onclick="this.select()" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" name="Message" placeholder="Message..." onclick="this.select()" required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit" id="submit-btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Foot Section-->
+    <footer>
+        <span>Copyright <span class="far fa-copyright"></span>&nbsp;<a href="">The Entertainment Band & Friends</a> | 2024 All Rights Reserved</span>
+    </footer>
+
+    <!--Web3Forms hCaptcha source (free use)-->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
+    <!--Main JS file-->
+    <script src="js/band-page-app.js"></script>
 </body>
+</html>
