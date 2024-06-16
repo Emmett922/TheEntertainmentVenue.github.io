@@ -51,5 +51,3 @@ function showSlider(type){
         next.click();
     }, timeAutoNext);
 }
-
-// -- Choosing a specific thumbnail -- //

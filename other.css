@@ -72,6 +72,20 @@ header {
     box-shadow: rgb(0,0,0) 0px 20px 30px -10px;
 }
 
+.venue-page {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('images/page-banner1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.oak-tree-page {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('images/oak-tree-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 header nav a {
     vertical-align: middle;
     position: relative;
@@ -81,11 +95,34 @@ header nav a {
     font-size: 50px;
 }
 
+.venue-page img {
+    height: 450px;
+    margin-top: -5%;
+}
+
+.oak-tree-page img {
+    height: 450px;
+}
+
+.venue-page nav #home-link,
+.oak-tree-page nav #home-link {
+    margin-right: 5%;
+}
+
+.venue-page nav #contact-link,
+.oak-tree-page nav #contact-link {
+    margin-left: 5%;
+}
+
 header nav .title {
     margin-inline: 50px;
 }
 
-header nav .link::after {
+header nav .link::after,
+.venue-page nav #home-link::after,
+.venue-page nav #contact-link::after,
+.oak-tree-page nav #home-link::after,
+.oak-tree-page nav #contact-link::after {
     content: '';
     position: absolute;
     background-color: goldenrod;
@@ -96,7 +133,11 @@ header nav .link::after {
     transition: all 0.3s ease-in;
 }
 
-header nav .link:hover::after {
+header nav .link:hover::after,
+.venue-page nav #home-link:hover::after,
+.venue-page nav #contact-link:hover::after,
+.oak-tree-page nav #home-link:hover::after,
+.oak-tree-page nav #contact-link:hover::after  {
     width: 100%;
 }
 
