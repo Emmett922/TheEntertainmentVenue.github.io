@@ -146,15 +146,21 @@ section {
     padding: 150px 0;
 }
 
+.services {
+    padding: 100px 0;
+}
+
 /* ### Introduction Section Styling ### */
-.introduction {
+.introduction,
+.services {
     text-align: center;
 }
 
 .introduction .title,
 .members .title,
 .contact .title,
-.booking .title {
+.booking .title,
+.services .title {
     font-family: Spice Rice;
     font-size: 80px;
     background-image: linear-gradient(to top, rgb(255, 236, 131) 0%, rgb(255, 184, 6) 100%);
@@ -165,18 +171,21 @@ section {
     -moz-text-fill-color: transparent;
 }
 
-.introduction .max-width {
+.introduction .max-width,
+.services .max-width {
     max-width: 1550px;
 }
 
-.introduction .content {
+.introduction .content,
+.services .content {
     padding-top: 40px;
     text-align: justify;
     max-width: 1550px;
     margin: 0 auto;
 }
 
-.introduction .content p {
+.introduction .content p,
+.services .content p {
     color: rgb(211, 211, 211);
     font-size: 26px;
     font-family: 'Lilita One';
@@ -184,7 +193,8 @@ section {
 
 .introduction .content .column.one,
 .introduction .content .column.two,
-.introduction .content .column.three {
+.introduction .content .column.three,
+.services .content .column {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -192,7 +202,8 @@ section {
 }
 
 .introduction .content .column.one .left,
-.introduction .content .column.three .left {
+.introduction .content .column.three .left,
+.services .content .column .left {
     width: 45%;
     height: 550px;
     width: 400px;
@@ -201,7 +212,8 @@ section {
 }
 
 .introduction .content .column.one .right,
-.introduction .content .column.three .right {
+.introduction .content .column.three .right,
+.services .content .column .right {
     width: 55%;
 }
 
@@ -220,6 +232,26 @@ section {
 .introduction .content .column.two,
 .introduction .content .column.three {
     margin-top: 5%;
+}
+
+
+
+/* ## Services Section Styling ## */
+.services .content .extra{
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Lilita One';
+}
+
+.services .content .column h3 {
+    font-family: 'Lilita One';
+    font-size: 33px;
+    background-image: linear-gradient(to top, rgb(255, 236, 131) 0%, rgb(255, 184, 6) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 }
 
 
@@ -469,7 +501,8 @@ section {
     text-align: center;
 }
 
-.booking .booking-content .buttons h2 {
+.booking .booking-content .buttons h2,
+.services .content .extra h2 {
     font-size: 40px;
     background-image: linear-gradient(to top, rgb(255, 236, 131) 0%, rgb(255, 184, 6) 100%);
     background-size: 100%;
@@ -479,7 +512,8 @@ section {
     -moz-text-fill-color: transparent;
 }
 
-.booking .booking-content .buttons a{
+.booking .booking-content .buttons a,
+.services .content .extra a {
     font-family: 'Lilita One';
     display: inline-block;
     background: none;
@@ -492,7 +526,8 @@ section {
     transition: all 0.3s ease;
 }
 
-.booking .booking-content .buttons a:hover {
+.booking .booking-content .buttons a:hover,
+.services .content .extra a:hover {
     color: black;
     background-image: linear-gradient(to top, gold 0%, goldenrod 70%);
     border: 2px solid goldenrod;
@@ -613,7 +648,8 @@ footer span a:hover {
 
     .introduction .content .column.one .left,
     .introduction .content .column.two .right,
-    .introduction .content .column.three .left {
+    .introduction .content .column.three .left,
+    .services .content .column .left {
         display: flex;
         justify-content: center;
         margin: 0 auto 60px;
@@ -624,7 +660,8 @@ footer span a:hover {
     }
 
     .introduction .content .column.one .right,
-    .introduction .content .column.three .right {
+    .introduction .content .column.three .right,
+    .services .content .column .right {
         flex: 100%;
     }
 
@@ -637,6 +674,17 @@ footer span a:hover {
     header nav img {
         height: 400px;
         width: 400px;
+    }
+
+    .venue-page img,
+    .oak-tree-page img {
+        height: 420px;
+        width: 740px;
+    }
+
+    .venue-page nav a,
+    .oak-tree-page nav a {
+        font-size: 25px;
     }
 
     header nav .title {
@@ -653,6 +701,17 @@ footer span a:hover {
         width: 350px;
     }
 
+    .venue-page img,
+    .oak-tree-page img {
+        height: 350px;
+        width: 540px;
+    }
+
+    .venue-page nav a,
+    .oak-tree-page nav a {
+        font-size: 25px;
+    }
+
     header nav .title {
         margin-inline: 5px;
     }
@@ -666,12 +725,24 @@ footer span a:hover {
         height: 280px;
         width: 280px;
     }
+
+    .venue-page img,
+    .oak-tree-page img {
+        height: 300px;
+        width: 420px;
+    }
+
     header {
         height: 98vh;
     }
 
     header nav a {
         font-size: 15px;
+    }
+
+    .venue-page nav a,
+    .oak-tree-page nav a {
+        font-size: 25px;
     }
 
     .introduction .content .column.two .right {
