@@ -249,6 +249,17 @@
     
                         <!--hCaptcha: Extra Layer of SPAM Prevention-->
                         <div class="h-captcha" data-captch="true"></div>
+
+                        <!--hCaptcha configuration-->
+                        <div class="h-captcha"
+                            data-captch="true"
+                            data-lang="en"
+                            data-theme="dark"
+                            data-size="compact"
+                            data-orientation="portrait"
+                            data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                            data-render="explicit">
+                        </div>
     
                         <div class="fields">
                             <div class="field name">
@@ -282,7 +293,25 @@
         <span>Copyright <span class="far fa-copyright"></span>&nbsp;<a href="">The Entertainment Band & Friends</a> | 2024 All Rights Reserved</span>
     </footer>
 
+    <!--Web3Forms hCaptcha source (free use)-->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
     <!--Main JS file-->
-    <script src="js/band-page-app.js"></script>
+    <script src="js/web-app.js"></script>
+
+    <!--Client Side Validation-->
+    <script type="text/javascript">
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', function(e) {
+            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+            if (!hCaptcha) {
+                e.preventDefault();
+                alert("Please fill out captcha field")
+                return
+            }
+        });
+    </script>
 </body>
 </html>

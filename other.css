@@ -152,7 +152,8 @@ section {
 
 /* ### Introduction Section Styling ### */
 .introduction,
-.services {
+.services,
+.about {
     text-align: center;
 }
 
@@ -160,7 +161,8 @@ section {
 .members .title,
 .contact .title,
 .booking .title,
-.services .title {
+.services .title,
+.about .title {
     font-family: Spice Rice;
     font-size: 80px;
     background-image: linear-gradient(to top, rgb(255, 236, 131) 0%, rgb(255, 184, 6) 100%);
@@ -172,12 +174,14 @@ section {
 }
 
 .introduction .max-width,
-.services .max-width {
+.services .max-width,
+.about .max-width {
     max-width: 1550px;
 }
 
 .introduction .content,
-.services .content {
+.services .content,
+.about .content {
     padding-top: 40px;
     text-align: justify;
     max-width: 1550px;
@@ -194,7 +198,8 @@ section {
 .introduction .content .column.one,
 .introduction .content .column.two,
 .introduction .content .column.three,
-.services .content .column {
+.services .content .column,
+.about .content .column {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -203,7 +208,8 @@ section {
 
 .introduction .content .column.one .left,
 .introduction .content .column.three .left,
-.services .content .column .left {
+.services .content .column .left,
+.about .content .column .left {
     width: 45%;
     height: 550px;
     width: 400px;
@@ -213,7 +219,8 @@ section {
 
 .introduction .content .column.one .right,
 .introduction .content .column.three .right,
-.services .content .column .right {
+.services .content .column .right,
+.about .content .column .right {
     width: 55%;
 }
 
@@ -237,7 +244,8 @@ section {
 
 
 /* ## Services Section Styling ## */
-.services .content .extra{
+.services .content .extra,
+.about .content .extra {
     margin: 0 auto;
     text-align: center;
     font-family: 'Lilita One';
@@ -502,7 +510,8 @@ section {
 }
 
 .booking .booking-content .buttons h2,
-.services .content .extra h2 {
+.services .content .extra h2,
+.about .content .extra h2 {
     font-size: 40px;
     background-image: linear-gradient(to top, rgb(255, 236, 131) 0%, rgb(255, 184, 6) 100%);
     background-size: 100%;
@@ -513,7 +522,8 @@ section {
 }
 
 .booking .booking-content .buttons a,
-.services .content .extra a {
+.services .content .extra a,
+.about .content .extra a {
     font-family: 'Lilita One';
     display: inline-block;
     background: none;
@@ -527,7 +537,8 @@ section {
 }
 
 .booking .booking-content .buttons a:hover,
-.services .content .extra a:hover {
+.services .content .extra a:hover,
+.about .content .extra a:hover {
     color: black;
     background-image: linear-gradient(to top, gold 0%, goldenrod 70%);
     border: 2px solid goldenrod;
@@ -551,6 +562,16 @@ footer span a {
 footer span a:hover {
     text-decoration: underline;
     color: goldenrod;
+}
+
+
+
+/* ## About Info Styling (Old Oak Tree Page) ## */
+.about h2 {
+    color: rgb(211, 211, 211);
+    font-size: 35px;
+    font-family: 'Lilita One';
+    font-weight: 300;
 }
 
 
@@ -649,7 +670,8 @@ footer span a:hover {
     .introduction .content .column.one .left,
     .introduction .content .column.two .right,
     .introduction .content .column.three .left,
-    .services .content .column .left {
+    .services .content .column .left,
+    .about .content .column .left {
         display: flex;
         justify-content: center;
         margin: 0 auto 60px;
@@ -661,7 +683,8 @@ footer span a:hover {
 
     .introduction .content .column.one .right,
     .introduction .content .column.three .right,
-    .services .content .column .right {
+    .services .content .column .right,
+    .about .content .column .right {
         flex: 100%;
     }
 

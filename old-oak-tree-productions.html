@@ -23,12 +23,36 @@
     </div>
     <!--Heading/Nav-->
     <header class="oak-tree-page">
-        <a href=""><img src="images/image4 copy.png"></a>
+        <a href="#about"><img src="images/image4 copy.png"></a>
         <nav>
             <a href="index.html" id="home-link">Home</a>
             <a href="#contact" id="contact-link">Contact</a>
         </nav>
     </header>
+
+    <!--About Us Section-->
+    <section class="about" id="about">
+        <div class="max-width">
+            <div class="title reveal">What We Offer</div>
+            <div class="content reveal">
+                <div class="column">
+                    <div class="left reveal"></div>
+                    <div class="right reveal">
+                        <h2>Organized event planning and detailed event management.</h2>
+                        <br>
+                        <h2>Organized music production from stage, sound, lighting and band or music/entertainment performances management and execution.</h2>
+                        <br>
+                        <h2>Assist in placement of talent and musicians, bands, DJ, and entertainment performers at corporate events, festivals, and private events</h2>
+                    </div>
+                </div>
+                <div class="extra">
+                    <br><br><br>
+                    <h2>&nbsp;Interested?</h2>
+                    <a href="#contact" class="contact-us">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--Contact Us Section-->
     <section class="contact" id="contact">
@@ -97,6 +121,17 @@
                         <!--hCaptcha: Extra Layer of SPAM Prevention-->
                         <div class="h-captcha" data-captch="true"></div>
 
+                        <!--hCaptcha configuration-->
+                        <div class="h-captcha"
+                            data-captch="true"
+                            data-lang="en"
+                            data-theme="dark"
+                            data-size="compact"
+                            data-orientation="portrait"
+                            data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                            data-render="explicit">
+                        </div>
+
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" class="name" name="Name" placeholder="Name" onclick="this.select()" required>
@@ -128,7 +163,25 @@
         <span>Copyrigth <span class="far fa-copyright"></span>&nbsp;<a href="">Old Oak Tree Productions</a> | 2024 All Rights Reserved</span>
     </footer>
 
+    <!--Web3Forms hCaptcha source (free use)-->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
     <!--Main JS file-->
-    <script src="js/band-page-app.js"></script>
+    <script src="js/web-app.js"></script>
+
+    <!--Client Side Validation-->
+    <script type="text/javascript">
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', function(e) {
+            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+            if (!hCaptcha) {
+                e.preventDefault();
+                alert("Please fill out captcha field")
+                return
+            }
+        });
+    </script>
 </body>
 </html>
