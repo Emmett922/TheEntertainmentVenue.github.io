@@ -58,7 +58,7 @@ body {
 /* ## Header Section Styling ## */
 header {
     align-content: center;
-    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('images/jazz-banner.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('images/page-banner2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -153,7 +153,8 @@ section {
 /* ### Introduction Section Styling ### */
 .introduction,
 .services,
-.about {
+.about,
+.band-videos {
     text-align: center;
 }
 
@@ -162,7 +163,9 @@ section {
 .contact .title,
 .booking .title,
 .services .title,
-.about .title {
+.about .title,
+.testimonials .title,
+.band-videos .title {
     font-family: Spice Rice;
     font-size: 80px;
     background-image: linear-gradient(to top, rgb(255, 236, 131) 0%, rgb(255, 184, 6) 100%);
@@ -318,6 +321,60 @@ section {
     border-color: white;
 }
 
+
+
+/* ### Videos Section Styling ### */
+.band-videos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.band-videos .title {
+    margin-bottom: 15px;
+}
+
+.band-videos video {
+    border: none;
+    border-radius: 10px;
+}
+
+.band-videos .video-gallery-controls {
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.band-videos .video-gallery-controls .prev,
+.band-videos .video-gallery-controls .next {
+    padding-top: 7px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    font-family: monospace;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.band-videos .video-gallery-controls .prev:hover,
+.band-videos .video-gallery-controls .next:hover {
+    color: black;
+    background-image: linear-gradient(to top, gold 0%, goldenrod 70%);
+    border: 2px solid goldenrod;
+}
+
+
+
+/* ## Owl Dots Styling ## */
 .owl-dots {
     text-align: center;
     margin-top: 20px;
@@ -543,6 +600,129 @@ section {
     background-image: linear-gradient(to top, gold 0%, goldenrod 70%);
     border: 2px solid goldenrod;
 }
+
+
+
+/* ### Testimonials ### */
+.testimonials .title {
+    margin-bottom: 8%;
+    text-align: center;
+}
+
+.testimonials .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.testimonials .wrapper .testimonials-content {
+    font-family: 'Lilita One';
+    position: relative;
+    width: 900px;
+    color: #fff;
+    background: #222;
+    margin: 80px 125px;
+    padding: 30px 20px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    box-shadow: 12px 12px 2px 1px gold;
+    margin-bottom: 6%;
+}
+
+.testimonials .wrapper .testimonials-content:hover {
+    transform: scale(1.05);
+}
+
+.testimonials .wrapper .testimonials-content .profile {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -18%;
+    width: 100%;
+    display: block;
+}
+
+.testimonials .wrapper .testimonials-content p {
+    margin-bottom: 25px;
+}
+
+.testimonials .wrapper .testimonials-content .profile .imgBox {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border: 8px solid gold;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonials .wrapper .testimonials-content .profile .imgBox img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s ease; 
+}
+
+.testimonials .wrapper .testimonials-content .profile .imgBox:hover img {
+    filter: saturate(140%);
+    transform: scale(1.15);
+}
+
+.testimonials .wrapper .testimonials-content .profile h2 {
+    padding: 5px 0;
+    text-transform: capitalize;
+    color: rgb(211, 211, 211);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.testimonials .wrapper .testimonials-content p {
+    margin-top: 50px;
+    color: rgb(211, 211, 211);
+    padding: 0 8px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.testimonials .wrapper .testimonials-content .left {
+    font-size: 30px;
+    display: block;
+    text-align: left;
+    color: gold;
+}
+
+.testimonials .wrapper .testimonials-content .right {
+    font-size: 30px;
+    display: block;
+    text-align: right;
+    color: gold;
+}
+
+.testimonials .wrapper .testimonials-content .social {
+    width: 100%;
+}
+
+.testimonials .wrapper .testimonials-content .social i {
+    font-size: 1.2em;
+    font-family: 'Lilita One';
+    color: rgb(211, 211, 211);
+    padding: 8px 25px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 4px;
+    box-shadow: 0.4px 4px rgba(0,0,0,0.5);
+}
+
+.testimonials .wrapper .testimonials-content .social i:hover {
+    background: gold;
+    color: black;
+}
+
 
 
 /* # Footer Section Styling # */

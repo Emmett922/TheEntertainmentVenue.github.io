@@ -19,7 +19,7 @@ function reveal() {
 
 // -- Owl Carousel and Page Scroll Script -- //
 $(document).ready(function() {
-    // Carousel
+    // Member Carousel
     $('.carousel').owlCarousel({
         margin: 20,
         loop: true,
@@ -36,6 +36,32 @@ $(document).ready(function() {
             },
             1000: {
                 items: 3,
+                nav: false
+            }
+        }
+    });
+
+    // Testimony Carousels
+    $('#band-testimonials .wrapper').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeOut: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            }
+        }
+    });
+    $('#venue-testimonials .wrapper').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeOut: 2000,
+        autoplayTimeOut: true,
+        responsive: {
+            0: {
+                items: 1,
                 nav: false
             }
         }
@@ -65,4 +91,34 @@ $(document).ready(function() {
             });
         });
     });
+
+    // -- Videos Scrolling -- //
+    var slide_vid = document.querySelector('.video-item');
+    var videos = ['Video_3.mov', 'Video_2.mov', 'Video.mov', 'Video_1.mov', 'Video_4.mov'];
+    var i = 0; // Current index in video gallery
+
+    // prev button being clicked
+    document.querySelector('.band-videos .video-gallery-controls .prev').addEventListener('click', function() {
+        if (i <= 0) i = videos.length;
+        i--;
+        return setVid();
+    });
+
+    // next button being clicked button being clicked
+    document.querySelector('.band-videos .video-gallery-controls .next').addEventListener('click', function() {
+        if (i >= videos.length - 1) i = -1;
+        i++;
+        return setVid();
+    });
+
+    // video ending and moving on to next video
+    function vidEndOntoNext() {
+        if (i >= videos.length - 1) i = -1;
+        i++;
+        return setVid();
+    }
+
+    function setVid() {
+        return slide_vid.setAttribute('src', 'videos/' + videos[i])
+    }
 });
