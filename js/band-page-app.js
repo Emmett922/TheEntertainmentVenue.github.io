@@ -42,7 +42,8 @@ $(document).ready(function() {
     });
 
     // Testimony Carousels
-    $('#band-testimonials .wrapper').owlCarousel({
+    /*
+    $('.band').owlCarousel({
         margin: 20,
         loop: true,
         autoplayTimeOut: 2000,
@@ -54,18 +55,23 @@ $(document).ready(function() {
             }
         }
     });
-    $('#venue-testimonials .wrapper').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplayTimeOut: 2000,
-        autoplayTimeOut: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: false
+    */
+    $('.owl-carousel').each(function() {
+        $(this).owlCarousel( {
+            margin: 20,
+            loop: true,
+            autoplayTimeOut: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                }
             }
-        }
+        });
     });
+
+
 
     // Scrolling
     $(window).scroll(function() {
@@ -96,6 +102,28 @@ $(document).ready(function() {
     var slide_vid = document.querySelector('.video-item');
     var videos = ['Video_3.mov', 'Video_2.mov', 'Video.mov', 'Video_1.mov', 'Video_4.mov'];
     var i = 0; // Current index in video gallery
+
+    // Play/Pause function
+    function play_pause(e) {
+        if (e == 'appear') {
+            slide_vid.play();
+        }
+        else {
+            slide_vid.pause();
+        }
+    }
+
+    // Check if video player is in view or not
+    $('.video-item').on('appear', function(event, $all_appeared_elements) {
+        play_pause('appear');
+    });
+    $('.video-item').on('disappear', function(event, $all_disappeared_elements) {
+        play_pause('disappear');
+    });
+
+    $('.video-item').bind('ended', function() {
+        vidEndOntoNext();
+    });
 
     // prev button being clicked
     document.querySelector('.band-videos .video-gallery-controls .prev').addEventListener('click', function() {
