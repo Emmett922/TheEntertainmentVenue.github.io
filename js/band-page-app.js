@@ -42,20 +42,6 @@ $(document).ready(function() {
     });
 
     // Testimony Carousels
-    /*
-    $('.band').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: false
-            }
-        }
-    });
-    */
     $('.owl-carousel').each(function() {
         $(this).owlCarousel( {
             margin: 20,
@@ -104,25 +90,15 @@ $(document).ready(function() {
     var i = 0; // Current index in video gallery
 
     // Play/Pause function
-    function play_pause(e) {
-        if (e == 'appear') {
-            slide_vid.play();
-        }
-        else {
-            slide_vid.pause();
-        }
-    }
+    $(window).scroll(function() {
+        if ($(this).scrollY) {
 
-    // Check if video player is in view or not
-    $('.video-item').on('appear', function(event, $all_appeared_elements) {
-        play_pause('appear');
-    });
-    $('.video-item').on('disappear', function(event, $all_disappeared_elements) {
-        play_pause('disappear');
+        }
     });
 
-    $('.video-item').bind('ended', function() {
-        vidEndOntoNext();
+    document.querySelector('.band-videos button').addEventListener('click', function(e) {
+        let pos = e.getBoundingClientRect();
+        console.log(pos);
     });
 
     // prev button being clicked

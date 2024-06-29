@@ -324,6 +324,10 @@ section {
 
 
 /* ### Videos Section Styling ### */
+video::-webkit-media-controls-timeline{ display: none !important; }
+video::-webkit-media-controls-current-time-display { display: none !important; }
+video::-webkit-media-controls-time-remaining-display { display: none !important; }
+
 .band-videos {
     display: flex;
     flex-direction: row;
