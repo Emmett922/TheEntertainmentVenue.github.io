@@ -28,11 +28,17 @@
         <i class="fas fa-angle-up"></i>
     </div>
     <!--Heading/Nav-->
-    <header>
+    <header class="band-page">
         <nav>
-            <a href="index.html" class="link">Home</a>
-            <a href="#introduction" class="title"><img src="images/the_entertainment_band_&_friends.png" alt=""></a>
-            <a href="#contact" class="link">Contact</a>
+            <a href="#introduction" class="title"><img style="height:auto" src="images/the_entertainment_band_&_friends.png" alt=""></a>
+            <br>
+            <a id="home-link" href="index.html" class="link">Home</a>
+            <a id="bio-link" href="#introduction" class="link">Bio</a>
+            <a id="booking-link" href="#booking" class="link">Booking Info</a>
+            <a id="members-link" href="#members" class="link">Members</a>
+            <a id="videos-link" href="#band-videos" class="link">Performances</a>
+            <a id="reviews-link" href="#testimonials" class="link">Reviews</a>
+            <a id="contact-link" href="#contact" class="link">Contact</a>
         </nav>
     </header>
 
@@ -69,30 +75,26 @@
         </div>
     </section>
 
-    <!--Band Performances Videos-->
-    <section class="band-videos" id="band-videos">
+    <!--Booking Section-->
+    <section class="booking" id="booking">
         <div class="max-width">
-            <h2 class="title reveal">Recent Performances</h2>
-            <br>
-            <button type="button">Button</button>
-            <br>
-            <div class="video-gallery reveal">
-                <div class="videos">
-                    <video 
-                    class="video-item"
-                    controls="controls"
-                    controls controlslist="nodownload noplaybackrate noremoteplayback" disablePictureInPicture
-                    onloadstart="this.volume=0.5"
-                    position="absolute"
-                    width="355px" 
-                    height="620px" 
-                    src="videos/Video_3.mov" 
-                    type="video/mov">
-                    </video>
-                </div>
-                <div class="video-gallery-controls">
-                    <div class="prev"><</div>
-                    <div class="next">></div>
+            <div class="title reveal">Booking Info.</div>
+            <div class="booking-content reveal">
+                <p>
+                    Book The Entertainment Band & Friends for your event/special occasion!
+                    We can provide a full band, personal musicians, or DJ based on your personal preference,
+                    for our venue, your chosen venue, any oustide events, festivals, corporate or private events, or weddings.
+                    The sky is the limit! <br><br> Band includes superior sound, sound engineering, and band manager for each event.
+                    <br><br> We can book the band arragement anywhere from a soloist (pianist, sax, guitar, etc.) to a 12 piece band, orchestra, and/or quartet.
+                    The Entertainment Band & Friends specializes in arrangements of Jazz and R&B music. Light background to lively and dance the night away style.
+                    <br><br> DJ quality services available for any genre and any type of event!
+                    <br><br> The Entertainment Band & Friends will meet your musical entertainment needs, and will work with any budget!
+                </p>
+                <div class="buttons">
+                    <br><br>
+                    <h2>Interested?</h2>
+                    <a href="#members" class="see-members">See Members</a>
+                    <a href="#contact" class="contact-us">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -194,26 +196,30 @@
         </div>
     </section>
 
-    <!--Booking Section-->
-    <section class="booking" id="booking">
+    <!--Band Performances Videos-->
+    <section class="band-videos" id="band-videos">
         <div class="max-width">
-            <div class="title reveal">Booking Info.</div>
-            <div class="booking-content reveal">
-                <p>
-                    Book The Entertainment Band & Friends for your event/special occasion!
-                    We can provide a full band, personal musicians, or DJ based on your personal preference,
-                    for our venue, your chosen venue, any oustide events, festivals, corporate or private events, or weddings.
-                    The sky is the limit! <br><br> Band includes superior sound, sound engineering, and band manager for each event.
-                    <br><br> We can book the band arragement anywhere from a soloist (pianist, sax, guitar, etc.) to a 12 piece band, orchestra, and/or quartet.
-                    The Entertainment Band & Friends specializes in arrangements of Jazz and R&B music. Light background to lively and dance the night away style.
-                    <br><br> DJ quality services available for any genre and any type of event!
-                    <br><br> The Entertainment Band & Friends will meet your musical entertainment needs, and will work with any budget!
-                </p>
-                <div class="buttons">
-                    <br><br>
-                    <h2>Interested?</h2>
-                    <a href="#members" class="see-members">See Members</a>
-                    <a href="#contact" class="contact-us">Contact Us</a>
+            <h2 class="title reveal">Live Performances</h2>
+            <br>
+            <button type="button">Button</button>
+            <br>
+            <div class="video-gallery reveal">
+                <div class="videos">
+                    <video 
+                    class="video-item"
+                    controls="controls"
+                    controls controlslist="nodownload noplaybackrate noremoteplayback" disablePictureInPicture
+                    onloadstart="this.volume=0.5"
+                    position="absolute"
+                    width="355px" 
+                    height="620px" 
+                    src="videos/Video_3.mov" 
+                    type="video/mov">
+                    </video>
+                </div>
+                <div class="video-gallery-controls">
+                    <div class="prev"><</div>
+                    <div class="next">></div>
                 </div>
             </div>
         </div>
@@ -223,7 +229,7 @@
     <section class="testimonials" id="testimonials">
         <div class="max-width">
             <h2 class="title reveal">Reviews</h2>
-            <div class="band wrapper owl-carousel reveal">
+            <div class="band wrapper reveal">
                 <div class="testimonials-content">
                     <div class="profile">
                         <div class="imgBox">
@@ -349,15 +355,15 @@
                         <div class="row">
                             <i class="fa-brands fa-facebook"></i>
                             <div class="info" id="facebook">
-                                <div class="head"><a href="https://www.facebook.com/entertainmentbandandfriends">Facebook</a></div>
-                                <div class="sub-title"><a href="https://www.facebook.com/entertainmentbandandfriends">@entertainmentbandandfriends</a></div>
+                                <div class="head"><a href="https://www.facebook.com/entertainmentbandandfriends"target="_blank">Facebook</a></div>
+                                <div class="sub-title"><a href="https://www.facebook.com/entertainmentbandandfriends" target="_blank">@entertainmentbandandfriends</a></div>
                             </div>
                         </div>
                         <div class="row">
                             <i class="fa-brands fa-instagram"></i>
                             <div class="info" id="insta">
-                                <div class="head"><a href="https://www.instagram.com/entertainmentbandandfriends/">Instagram</a></div>
-                                <div class="sub-title"><a href="https://www.instagram.com/entertainmentbandandfriends/">@entertainmentbandandfriends</a></div>
+                                <div class="head"><a href="https://www.instagram.com/entertainmentbandandfriends/" target="_blank">Instagram</a></div>
+                                <div class="sub-title"><a href="https://www.instagram.com/entertainmentbandandfriends/"target="_blank">@entertainmentbandandfriends</a></div>
                             </div>
                         </div>
                     </div>
@@ -371,7 +377,7 @@
                         <!--Email Subject for submission-->
                         <input type="hidden" name="subject" value="Entertainment Band & Friends">
     
-                        <!--Email From MGSystemsInc.com-->
+                        <!--Email From TheEntertainmentVenue.com-->
                         <input type="hidden" name="from_name" value="TheEntertainmentVenue.com">
     
                         <!--Reply To Customer-->
@@ -402,12 +408,30 @@
                                 <input type="text" name="Phone" placeholder="Phone" onclick="this.select()">
                             </div>
                         </div>
-                        <p>*Please specify which member(s) you wish to book</p>
-                        <div class="field members">
-                            <input type="text" name="Members" placeholder="Members" onclick="this.select()" required>
-                        </div>
                         <div class="field email">
                             <input type="email" name="Email" placeholder="Email" onclick="this.select()" required>
+                        </div>
+                        <div class="field entertainment-type">
+                            <select name="entertainment-type" id="entertainment-type-selection" class="drop-down" required>
+                                <option disabled selected hidden>Entertainment Type</option>
+                                <option value="venue">Venue</option>
+                                <option value="band">Band</option>
+                                <option value="management">Event Management</option>
+                            </select>
+                        </div>
+                        <div class="fields">
+                            <div class="field event-type">
+                                <input type="text" name="Event-Type" placeholder="Event Type" onclick="this.select()" required>
+                            </div>
+                            <div class="field location">
+                                <input type="text" name="event-location" placeholder="Event Location" onfocus="this.select()" required>
+                            </div>
+                        </div>
+                        <div class="field event-date">
+                            <input type="text" name="event-date" placeholder="Event Date (mm/dd/yyyy)" onfocus="(this.type='date')" onclick="this.select()" required>
+                        </div>
+                        <div class="field event-time">
+                            <input type="text" name="event-time" placeholder="Event Time (am/pm)" onfocus="(this.type='time')" onclick="this.select()" required>
                         </div>
                         <div class="field textarea">
                             <textarea cols="30" rows="10" name="Message" placeholder="Message..." onclick="this.select()" required></textarea>

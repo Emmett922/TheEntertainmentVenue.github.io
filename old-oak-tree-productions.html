@@ -34,6 +34,8 @@
         <a href="#about"><img src="images/image4 copy.png"></a>
         <nav>
             <a href="index.html" id="home-link">Home</a>
+            <a id="about-link" href="#about">Service Info</a>
+            <a id="reviews-link" href="#testimonials">Reviews</a>
             <a href="#contact" id="contact-link">Contact</a>
         </nav>
     </header>
@@ -66,7 +68,7 @@
     <section class="testimonials" id="testimonials">
         <div class="max-width">
             <h2 class="title reveal">Reviews</h2>
-            <div class="ot wrapper owl-carousel reveal">
+            <div class="ot wrapper reveal">
                 <div class="testimonials-content">
                     <div class="profile">
                         <div class="imgBox">
@@ -255,8 +257,27 @@
                         <div class="field email">
                             <input type="email" name="Email" placeholder="Email" onclick="this.select()" required>
                         </div>
-                        <div class="field subject">
-                            <input type="text" name="Subject" placeholder="Subject" onclick="this.select()" required>
+                        <div class="field entertainment-type">
+                            <select name="entertainment-type" id="entertainment-type-selection" class="drop-down" required>
+                                <option disabled selected hidden>Entertainment Type</option>
+                                <option value="venue">Venue</option>
+                                <option value="band">Band</option>
+                                <option value="management">Event Management</option>
+                            </select>
+                        </div>
+                        <div class="fields">
+                            <div class="field event-type">
+                                <input type="text" name="Event-Type" placeholder="Event Type" onclick="this.select()" required>
+                            </div>
+                            <div class="field location">
+                                <input type="text" name="event-location" placeholder="Event Location" onfocus="this.select()" required>
+                            </div>
+                        </div>
+                        <div class="field event-date">
+                            <input type="text" name="event-date" placeholder="Event Date (mm/dd/yyyy)" onfocus="(this.type='date')" onclick="this.select()" required>
+                        </div>
+                        <div class="field event-time">
+                            <input type="text" name="event-time" placeholder="Event Time (am/pm)" onfocus="(this.type='time')" onclick="this.select()" required>
                         </div>
                         <div class="field textarea">
                             <textarea name="Message" cols="30" rows="10" placeholder="Message..." onclick="this.select()" required></textarea>

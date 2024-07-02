@@ -11,7 +11,7 @@ let timeDom = document.querySelector('.carousel .time');
 // -- Cycling through home pages -- //
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 let timeRunning = 3000;
-let timeAutoNext = 10000;
+//let timeAutoNext = 10000;
 
 nextDom.onclick = function(){
     showSlider('next');    

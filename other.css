@@ -63,27 +63,16 @@ header {
     background-repeat: no-repeat;
     background-attachment: fixed;
     align-self: center;
-    height: 90vh;
-    margin-inline: 2.2%;
-    margin-top: 1%;
+    height: 100vh;
     text-align: center;
-    width: 95vw;
-    border-radius: 40px;
-    box-shadow: rgb(0,0,0) 0px 20px 30px -10px;
 }
 
 .venue-page {
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('images/page-banner1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .oak-tree-page {
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('images/oak-tree-3.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 header nav a {
@@ -92,20 +81,41 @@ header nav a {
     color: white;
     font-family: 'Galada';
     text-decoration: none;
-    font-size: 50px;
+    font-size: 30px;
+}
+
+.band-page img {
+    height: 700px;
+    margin-top: -5%;
 }
 
 .venue-page img {
     height: 450px;
     margin-top: -5%;
+    margin-bottom: 2%;
 }
 
 .oak-tree-page img {
     height: 450px;
+    margin-bottom: 2%;
+}
+
+.band-page nav #home-link,
+.band-page nav #bio-link,
+.band-page nav #booking-link,
+.band-page nav #members-link,
+.band-page nav #videos-link {
+    margin-right: 2.5%;
+}
+
+.band-page nav #contact-link {
+    margin-left: 2.5%;
 }
 
 .venue-page nav #home-link,
-.oak-tree-page nav #home-link {
+.venue-page nav #services-link,
+.oak-tree-page nav #home-link,
+.oak-tree-page nav #about-link {
     margin-right: 5%;
 }
 
@@ -114,14 +124,14 @@ header nav a {
     margin-left: 5%;
 }
 
-header nav .title {
-    margin-inline: 50px;
-}
-
 header nav .link::after,
 .venue-page nav #home-link::after,
+.venue-page nav #services-link::after,
+.venue-page nav #reviews-link::after,
 .venue-page nav #contact-link::after,
 .oak-tree-page nav #home-link::after,
+.oak-tree-page nav #about-link::after,
+.oak-tree-page nav #reviews-link::after,
 .oak-tree-page nav #contact-link::after {
     content: '';
     position: absolute;
@@ -135,8 +145,12 @@ header nav .link::after,
 
 header nav .link:hover::after,
 .venue-page nav #home-link:hover::after,
+.venue-page nav #services-link:hover::after,
+.venue-page nav #reviews-link:hover::after,
 .venue-page nav #contact-link:hover::after,
 .oak-tree-page nav #home-link:hover::after,
+.oak-tree-page nav #about-link:hover::after,
+.oak-tree-page nav #reviews-link:hover::after,
 .oak-tree-page nav #contact-link:hover::after  {
     width: 100%;
 }
@@ -423,8 +437,11 @@ video::-webkit-media-controls-time-remaining-display { display: none !important;
 .booking .booking-content {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
+}
+
+.booking .booking-content {
+    align-items: center;
 }
 
 .contact .max-width {
@@ -438,6 +455,10 @@ video::-webkit-media-controls-time-remaining-display { display: none !important;
 .contact .contact-content .text {
     font-size: 25px;
     margin-bottom: 10px;
+}
+
+.contact .contact-content .left {
+    margin-top: 1%;
 }
 
 .contact .contact-content .left .icons {
@@ -494,11 +515,13 @@ video::-webkit-media-controls-time-remaining-display { display: none !important;
     margin-bottom: 15px;
 }
 
-.contact .right form .name {
+.contact .right form .name,
+.contact .right form .event-type {
     margin-right: 10px;
 }
 
-.contact .right form .phone {
+.contact .right form .phone,
+.contact .right form .location {
     margin-left: 10px;
 }
 
@@ -508,6 +531,7 @@ video::-webkit-media-controls-time-remaining-display { display: none !important;
 }
 
 .contact .right form .field input,
+.contact .right form .field select,
 .contact .right form .textarea textarea {
     height: 100%;
     width: 100%;
@@ -608,13 +632,16 @@ video::-webkit-media-controls-time-remaining-display { display: none !important;
 
 
 /* ### Testimonials ### */
+.testimonials .max-width {
+    max-width: 2000px;
+}
+
 .testimonials .title {
-    margin-bottom: 8%;
+    margin-bottom: 7%;
     text-align: center;
 }
 
 .testimonials .wrapper {
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -624,7 +651,7 @@ video::-webkit-media-controls-time-remaining-display { display: none !important;
 .testimonials .wrapper .testimonials-content {
     font-family: 'Lilita One';
     position: relative;
-    width: 900px;
+    width: 600px;
     color: #fff;
     background: #222;
     margin: 80px 125px;
@@ -777,22 +804,17 @@ footer span a:hover {
 
 
 /* ### Page Responsiveness ### */
-@media (max-width: 1300px) {
-
-}
-@media (max-width: 1150px) {
+@media screen and (max-width: 1150px) {
     header nav img {
         height: 650px;
         width: 650px;
     }
 
-    header nav .title {
-        margin-inline: 35px;
-    }
-
     .introduction .content .column.one .left,
     .introduction .content .column.two .right,
-    .introduction .content .column.three .left {
+    .introduction .content .column.three .left,
+    .services .services-container .column .left,
+    .about .content .column .left  {
         height: 375px;
         width: 350px
     }
@@ -806,11 +828,17 @@ footer span a:hover {
     .contact .title {
         font-size: 60px;
     }
+
+    .about .content .right h2 {
+        font-size: 32px;
+    }
 }
-@media (max-width: 1050px) {
+@media screen and (max-width: 1050px) {
     .introduction .content .column.one .left,
     .introduction .content .column.two .right,
-    .introduction .content .column.three .left {
+    .introduction .content .column.three .left,
+    .services .services-container .column .left,
+    .about .content .column .left {
         height: 300px;
         width: 275px;
     }
@@ -819,14 +847,10 @@ footer span a:hover {
         font-size: 15px;
     }
 }
-@media (max-width: 1046px) {
+@media screen and (max-width: 1046px) {
     header nav img {
         height: 500px;
         width: 500px;
-    }
-
-    header nav .title {
-        margin-inline: 20px;
     }
 
     header nav a {
@@ -835,13 +859,64 @@ footer span a:hover {
     .introduction .title {
         font-size: 40px;
     }
+
+    .services .services-container,
+    .about .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .services-container .column,
+    .about .content .column {
+        width: 100%;
+    }
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
     .max-width {
         padding: 0 50px;
     }
+
+    .venue-page #venue-logo,
+    .oak-tree-page img {
+        width: 800px;
+    }
+
+    .testimonials .wrapper .testimonials-content {
+        width: 500px;
+    }
+
+    .testimonials .wrapper .testimonials-content .profile {
+        top: -16%;
+    }
+
+    .testimonials .wrapper .testimonials-content .profile h2 {
+        font-size: 20px;
+    }
+
+    .testimonials .wrapper .testimonials-content p {
+        font-size: 15px;
+    }
+
+    .services .services-container,
+    .about .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .services-container .column,
+    .about .content .column {
+        width: 100%;
+    }
+
+    .booking .title {
+        font-size: 60px;
+    }
+
+    .booking p {
+        font-size: 20px;
+    }
 }
-@media (max-width: 947px) {
+@media screen and (max-width: 947px) {
     .max-width {
         padding: 0 50px;
     }
@@ -858,26 +933,56 @@ footer span a:hover {
     .about .content .column .left {
         display: flex;
         justify-content: center;
-        margin: 0 auto 60px;
-    }
-
-    .introduction .content .column.two .right {
-        margin-top: -110%;
+        margin: 0 auto 20px;
     }
 
     .introduction .content .column.one .right,
+    .introduction .content .column.two .left,
     .introduction .content .column.three .right,
     .services .content .column .right,
     .about .content .column .right {
         flex: 100%;
+        margin-bottom: 10%;
+    }
+
+    .introduction .content .column.two .right {
+        order: 1;
     }
 
     .introduction .content .column.two .left {
-        flex: 100%;
-        margin-top: 70%;
+        order: 2;
+    }
+
+    .testimonials .max-width {
+        max-width: none;
+    }
+
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .contact .contact-content .column .row {
+        font-size: 17px;
+    }
+
+    footer {
+        margin-top: -13%;
+        font-size: 13px;
     }
 }
-@media (max-width: 794px) {
+@media screen and (max-width: 805px) {
+    .venue-page #venue-logo,
+    .oak-tree-page img  {
+        width: 600px;
+        height: 400px;
+    }
+
+    .about .content .right h2 {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 794px) {
     header nav img {
         height: 400px;
         width: 400px;
@@ -894,15 +999,69 @@ footer span a:hover {
         font-size: 25px;
     }
 
-    header nav .title {
-        margin-inline: 10px;
-    }
-
     header nav a {
         font-size: 25px;
     }
+
+    .about .content .right h2 {
+        font-size: 32px;
+    }
 }
-@media (max-width: 586px) {
+@media screen and (max-width: 768px) {
+    .testimonials .testimonials-content {
+        width: 95%;
+        max-width: none;
+        margin: 20px auto;
+    }
+
+    .about .content .right h2 {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 724px) {
+    .testimonials {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .testimonials .max-width {
+        max-width: none;
+    }
+
+    .services .services-container {
+        flex-direction: column;
+    }
+
+    .services .services-container .right {
+        width: 100%;
+        max-width: none;
+        margin-top: 20px;
+    }
+
+    .about .content .right h2 {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 586px) {
+    .venue-page #venue-logo,
+    .oak-tree-page img {
+        width: 500px;
+        height: 300px;
+    }
+
+    .introduction .title,
+    .members .title,
+    .contact .title,
+    .booking .title,
+    .services .title,
+    .about .title,
+    .testimonials .title,
+    .band-videos .title {
+        font-size: 50px;
+    }
+
     header nav img {
         height: 350px;
         width: 350px;
@@ -926,10 +1085,39 @@ footer span a:hover {
     header nav a {
         font-size: 20px;
     }
+
+    .testimonials .wrapper .testimonials-content {
+        width: 400px;
+    }
+
+    .testimonials .wrapper .testimonials-content {
+        top: -15%;
+    }
+
+    .services .services-container .right {
+        width: 100%;
+        max-width: none;
+        margin-top: 20px;
+    }
+
+    .services .services-container .right p,
+    .about .content .right h2 {
+        font-size: 18px;
+    }
+
+    .services .services-container .right h3 {
+        font-size: 30px;
+    }
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
+    .venue-page #venue-logo,
+    .oak-tree-page img {
+        height: 220px;
+        width: 420px;
+    }
+
     header nav img {
-        height: 280px;
+        height: 100px;
         width: 280px;
     }
 
@@ -939,24 +1127,42 @@ footer span a:hover {
         width: 420px;
     }
 
-    header {
-        height: 98vh;
-    }
-
     header nav a {
         font-size: 15px;
     }
 
     .venue-page nav a,
     .oak-tree-page nav a {
-        font-size: 25px;
+        font-size: 18px;
     }
 
-    .introduction .content .column.two .right {
-        margin-top: -180%;
+    .testimonials .wrapper .testimonials-content {
+        width: 350px;
     }
 
-    .introduction .content .column.two .left {
-        margin-top: 100%;
+    .services .services-container .right {
+        width: 100%;
+        max-width: none;
+        margin-top: 20px;
     }
+
+    .services .services-container .right p {
+        font-size: 16px;
+    }
+
+    .services .services-container .right h3 {
+        font-size: 28px;
+    }
+
+    .booking .title {
+        font-size: 40px;
+    }
+
+    .booking p {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    
 }
