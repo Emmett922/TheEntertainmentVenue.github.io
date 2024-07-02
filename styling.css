@@ -421,7 +421,7 @@ header nav a:hover {
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     @keyframes outFrame {
         to {
             height: 0px;
