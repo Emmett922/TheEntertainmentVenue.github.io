@@ -89,18 +89,6 @@ $(document).ready(function() {
     var videos = ['Video_3.mov', 'Video_2.mov', 'Video.mov', 'Video_1.mov', 'Video_4.mov'];
     var i = 0; // Current index in video gallery
 
-    // Play/Pause function
-    $(window).scroll(function() {
-        if ($(this).scrollY) {
-
-        }
-    });
-
-    document.querySelector('.band-videos button').addEventListener('click', function(e) {
-        let pos = e.getBoundingClientRect();
-        console.log(pos);
-    });
-
     // prev button being clicked
     document.querySelector('.band-videos .video-gallery-controls .prev').addEventListener('click', function() {
         if (i <= 0) i = videos.length;

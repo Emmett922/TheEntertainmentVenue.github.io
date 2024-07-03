@@ -202,7 +202,6 @@
         <div class="max-width">
             <h2 class="title reveal">Live Performances</h2>
             <br>
-            <button type="button">Button</button>
             <br>
             <div class="video-gallery reveal">
                 <div class="videos">
@@ -215,7 +214,8 @@
                     width="355px" 
                     height="620px" 
                     src="videos/Video_3.mov" 
-                    type="video/mov">
+                    type="video/mov"
+                    onended="vidEndOntoNext()">
                     </video>
                 </div>
                 <div class="video-gallery-controls">
@@ -429,10 +429,10 @@
                             </div>
                         </div>
                         <div class="field event-date">
-                            <input type="text" name="event-date" placeholder="Event Date (mm/dd/yyyy)" onfocus="(this.type='date')" onclick="this.select()" required>
+                            <input type="text" name="event-date" placeholder="Event Date (mm/dd/yyyy)" onclick="this.select()" required>
                         </div>
                         <div class="field event-time">
-                            <input type="text" name="event-time" placeholder="Event Time (am/pm)" onfocus="(this.type='time')" onclick="this.select()" required>
+                            <input type="text" name="event-time" placeholder="Event Time (am/pm)" onclick="this.select()" required>
                         </div>
                         <div class="field textarea">
                             <textarea cols="30" rows="10" name="Message" placeholder="Message..." onclick="this.select()" required></textarea>
